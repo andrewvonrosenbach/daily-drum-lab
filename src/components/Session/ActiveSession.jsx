@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react'
 import SessionBlock from './SessionBlock.jsx'
 import SelfReport from '../common/SelfReport.jsx'
-import { useMetronome } from '../Metronome/useMetronome.js'
+import Timer from '../common/Timer.jsx'
+import Metronome from '../Metronome/Metronome.jsx'
 
 const PHASES = ['warmup', 'primary', 'primary-report', 'secondary', 'secondary-report', 'done']
 
@@ -13,16 +14,11 @@ function WarmUpBlock({ warmUp, metronome, timerRunning, onTimerComplete }) {
         <h2 className="text-xl font-bold mt-0.5">{warmUp.exercise?.name}</h2>
         <p className="text-sm text-gray-400 mt-0.5">{warmUp.exercise?.description}</p>
       </div>
-      <div className="bg-gray-800 rounded-xl p-3 text-center">
-        <div className="text-xs text-gray-500 mb-0.5">Comfortable tempo</div>
-        <div className="text-3xl font-bold text-blue-400">{warmUp.tempo} <span className="text-base text-gray-400 font-normal">BPM</span></div>
-      </div>
+      <Metronome metronome={metronome} />
       <div className="bg-gray-800 border-l-4 border-blue-500 rounded-r-xl px-4 py-3">
         <p className="text-sm text-gray-300">Settle in. This is familiar territory — focus on relaxed technique.</p>
       </div>
-      <div className="flex items-center gap-3">
-        <div className="text-sm text-gray-400">{warmUp.durationMins} min</div>
-      </div>
+      <Timer durationMins={warmUp.durationMins} running={timerRunning} onComplete={onTimerComplete} />
     </div>
   )
 }
@@ -38,7 +34,6 @@ export default function ActiveSession({ session, metronome, onComplete, onSkip }
   const hasSecondary = !!session.secondaryFocus
 
   useEffect(() => {
-    // Auto-set metronome tempo when phase changes
     const tempoForPhase = {
       warmup: warmUps[warmUpIndex]?.tempo,
       primary: session.primaryFocus?.tempo,
@@ -48,6 +43,9 @@ export default function ActiveSession({ session, metronome, onComplete, onSkip }
     if (t) {
       metronome.stop()
       metronome.setTempo(t)
+      metronome.start()
+    } else {
+      metronome.stop()
     }
   }, [phase, warmUpIndex])
 
