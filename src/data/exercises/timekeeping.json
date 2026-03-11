@@ -1,0 +1,235 @@
+[
+  {
+    "id": "time-001",
+    "name": "Basic Rock Beat",
+    "domain": "timekeeping",
+    "family": "rock",
+    "description": "8th notes on hi-hat, snare on 2 and 4, kick on 1 and 3",
+    "notation": {
+      "type": "kit",
+      "time_signature": "4/4",
+      "subdivision": "8th",
+      "voices": [
+        {
+          "instrument": "hihat",
+          "position": "top",
+          "notehead": "x",
+          "pattern": [1,1,1,1,1,1,1,1],
+          "sticking": ["R","R","R","R","R","R","R","R"],
+          "accents": [],
+          "ghosts": []
+        },
+        {
+          "instrument": "snare",
+          "position": "middle",
+          "notehead": "standard",
+          "pattern": [0,0,0,1,0,0,0,1],
+          "accents": [3, 7],
+          "ghosts": []
+        },
+        {
+          "instrument": "kick",
+          "position": "bottom",
+          "notehead": "standard",
+          "pattern": [1,0,0,0,1,0,0,0],
+          "accents": [],
+          "ghosts": []
+        }
+      ]
+    },
+    "tempo_floor": 60,
+    "tempo_ceiling": 160,
+    "tempo_step": 5,
+    "prerequisites": [],
+    "teacher_notes": {
+      "beginner": "Lock in the hi-hat first, then add snare on 2 and 4. Kick comes last. Play with a click.",
+      "intermediate": "The groove should feel like one unit, not three separate things. Relax your shoulders.",
+      "advanced": "Experiment with slight variations in hi-hat velocity. Not every 8th note needs to be identical."
+    },
+    "tags": ["groove", "rock", "fundamental", "warm-up-eligible"]
+  },
+  {
+    "id": "time-002",
+    "name": "Basic Funk Beat",
+    "domain": "timekeeping",
+    "family": "funk",
+    "description": "16th note hi-hat feel, displaced kick, ghost notes on snare",
+    "notation": {
+      "type": "kit",
+      "time_signature": "4/4",
+      "subdivision": "16th",
+      "voices": [
+        {
+          "instrument": "hihat",
+          "position": "top",
+          "notehead": "x",
+          "pattern": [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
+          "accents": [0,4,8,12],
+          "ghosts": []
+        },
+        {
+          "instrument": "snare",
+          "position": "middle",
+          "notehead": "standard",
+          "pattern": [0,0,0,0,1,0,1,0,0,0,0,0,1,0,0,0],
+          "accents": [4, 12],
+          "ghosts": [6]
+        },
+        {
+          "instrument": "kick",
+          "position": "bottom",
+          "notehead": "standard",
+          "pattern": [1,0,0,1,0,0,0,0,1,0,1,0,0,0,0,0],
+          "accents": [],
+          "ghosts": []
+        }
+      ]
+    },
+    "tempo_floor": 60,
+    "tempo_ceiling": 130,
+    "tempo_step": 5,
+    "prerequisites": ["time-001"],
+    "teacher_notes": {
+      "beginner": "Start without the ghost note. Get the kick pattern locked in with the hi-hat first.",
+      "intermediate": "Ghost notes should be barely audible — maybe 20% of the volume of the backbeat snare.",
+      "advanced": "The 'e' of beat 2 kick is what makes funk feel like it's pulling forward. Trust the pocket."
+    },
+    "tags": ["groove", "funk", "ghost-notes"]
+  },
+  {
+    "id": "time-003",
+    "name": "Jazz Ride Pattern",
+    "domain": "timekeeping",
+    "family": "jazz",
+    "description": "Classic jazz ride cymbal pattern: long-short-long-short",
+    "notation": {
+      "type": "kit",
+      "time_signature": "4/4",
+      "subdivision": "triplet",
+      "voices": [
+        {
+          "instrument": "ride",
+          "position": "top",
+          "notehead": "x",
+          "pattern": [1,0,1,1,0,1,1,0,1,1,0,1],
+          "accents": [],
+          "ghosts": []
+        },
+        {
+          "instrument": "hihat_foot",
+          "position": "below",
+          "notehead": "x",
+          "pattern": [0,0,0,1,0,0,0,0,0,1,0,0],
+          "accents": [],
+          "ghosts": []
+        }
+      ]
+    },
+    "tempo_floor": 60,
+    "tempo_ceiling": 220,
+    "tempo_step": 10,
+    "prerequisites": [],
+    "teacher_notes": {
+      "beginner": "Say 'spang-a-lang' out loud. That's the rhythm. Don't think about triplets — just feel it.",
+      "intermediate": "The ride should sound like it's floating, not hammering. Tip of the stick on the bow, or bell on uptempo tunes.",
+      "advanced": "The magic is in the swing. The 'and' of each beat should sit just slightly behind where you'd expect it."
+    },
+    "tags": ["jazz", "ride", "groove", "warm-up-eligible"]
+  },
+  {
+    "id": "time-004",
+    "name": "Shuffle Groove",
+    "domain": "timekeeping",
+    "family": "blues",
+    "description": "Triplet-based shuffle feel on hi-hat with standard backbeat",
+    "notation": {
+      "type": "kit",
+      "time_signature": "4/4",
+      "subdivision": "triplet",
+      "voices": [
+        {
+          "instrument": "hihat",
+          "position": "top",
+          "notehead": "x",
+          "pattern": [1,0,1,1,0,1,1,0,1,1,0,1],
+          "accents": [0,3,6,9],
+          "ghosts": []
+        },
+        {
+          "instrument": "snare",
+          "position": "middle",
+          "notehead": "standard",
+          "pattern": [0,0,0,1,0,0,0,0,0,1,0,0],
+          "accents": [3, 9],
+          "ghosts": []
+        },
+        {
+          "instrument": "kick",
+          "position": "bottom",
+          "notehead": "standard",
+          "pattern": [1,0,0,0,0,0,1,0,0,0,0,0],
+          "accents": [],
+          "ghosts": []
+        }
+      ]
+    },
+    "tempo_floor": 60,
+    "tempo_ceiling": 140,
+    "tempo_step": 5,
+    "prerequisites": ["time-001"],
+    "teacher_notes": {
+      "beginner": "This is a triplet feel — the hi-hat plays beats 1 and 3 of each triplet, skipping the middle. Like a horse trot.",
+      "intermediate": "The shuffle lives between straight and swung. Medium shuffle feels heavier and more earthbound than jazz swing.",
+      "advanced": "Lighten up the hi-hat strokes on the 'and' of each beat for a more sophisticated shuffle voice."
+    },
+    "tags": ["blues", "shuffle", "groove"]
+  },
+  {
+    "id": "time-005",
+    "name": "Half-Time Groove",
+    "domain": "timekeeping",
+    "family": "rock",
+    "description": "Snare moves to beat 3 instead of 2 and 4 — creates a spacious, heavy feel",
+    "notation": {
+      "type": "kit",
+      "time_signature": "4/4",
+      "subdivision": "16th",
+      "voices": [
+        {
+          "instrument": "hihat",
+          "position": "top",
+          "notehead": "x",
+          "pattern": [1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0],
+          "accents": [0,4,8,12],
+          "ghosts": []
+        },
+        {
+          "instrument": "snare",
+          "position": "middle",
+          "notehead": "standard",
+          "pattern": [0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0],
+          "accents": [8],
+          "ghosts": []
+        },
+        {
+          "instrument": "kick",
+          "position": "bottom",
+          "notehead": "standard",
+          "pattern": [1,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0],
+          "accents": [],
+          "ghosts": []
+        }
+      ]
+    },
+    "tempo_floor": 60,
+    "tempo_ceiling": 140,
+    "tempo_step": 5,
+    "prerequisites": ["time-001"],
+    "teacher_notes": {
+      "beginner": "Everything feels twice as slow. The snare on beat 3 should feel like an event, not a backbeat.",
+      "intermediate": "Half-time grooves are about what you don't play. Leave space. Let the kick do the talking.",
+      "advanced": "Add ghost notes on the snare before beat 3 to create forward motion in the phrase."
+    },
+    "tags": ["rock", "groove", "space"]
+  }
+]

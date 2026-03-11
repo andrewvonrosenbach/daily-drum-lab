@@ -1,0 +1,210 @@
+[
+  {
+    "id": "ind-001",
+    "name": "Jazz Comping: Basic Independence",
+    "domain": "independence",
+    "family": "jazz",
+    "description": "Maintain jazz ride pattern while snare plays independent quarter and 8th note figures",
+    "notation": {
+      "type": "kit",
+      "time_signature": "4/4",
+      "subdivision": "triplet",
+      "voices": [
+        {
+          "instrument": "ride",
+          "position": "top",
+          "notehead": "x",
+          "pattern": [1,0,1,1,0,1,1,0,1,1,0,1],
+          "accents": [],
+          "ghosts": []
+        },
+        {
+          "instrument": "snare",
+          "position": "middle",
+          "notehead": "standard",
+          "pattern": [0,0,0,0,0,1,0,0,0,0,0,0],
+          "accents": [5],
+          "ghosts": []
+        },
+        {
+          "instrument": "hihat_foot",
+          "position": "below",
+          "notehead": "x",
+          "pattern": [0,0,0,1,0,0,0,0,0,1,0,0],
+          "accents": [],
+          "ghosts": []
+        }
+      ]
+    },
+    "tempo_floor": 50,
+    "tempo_ceiling": 160,
+    "tempo_step": 10,
+    "prerequisites": ["time-003"],
+    "teacher_notes": {
+      "beginner": "The ride hand never stops. Think of it as a machine — set it and forget it. Your snare is the free agent.",
+      "intermediate": "Don't tense up when you add the snare. The ride pattern should not change at all.",
+      "advanced": "Listen to recordings of Tony Williams, Roy Haynes, or Elvin Jones for how this should feel."
+    },
+    "tags": ["jazz", "independence", "comping"]
+  },
+  {
+    "id": "ind-002",
+    "name": "Bass Drum Independence Over Rock",
+    "domain": "independence",
+    "family": "rock",
+    "description": "Maintain solid rock groove while bass drum plays syncopated figures",
+    "notation": {
+      "type": "kit",
+      "time_signature": "4/4",
+      "subdivision": "16th",
+      "voices": [
+        {
+          "instrument": "hihat",
+          "position": "top",
+          "notehead": "x",
+          "pattern": [1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0],
+          "accents": [0,4,8,12],
+          "ghosts": []
+        },
+        {
+          "instrument": "snare",
+          "position": "middle",
+          "notehead": "standard",
+          "pattern": [0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0],
+          "accents": [4, 12],
+          "ghosts": []
+        },
+        {
+          "instrument": "kick",
+          "position": "bottom",
+          "notehead": "standard",
+          "pattern": [1,0,0,1,0,0,1,0,0,0,1,0,0,1,0,0],
+          "accents": [],
+          "ghosts": []
+        }
+      ]
+    },
+    "tempo_floor": 60,
+    "tempo_ceiling": 130,
+    "tempo_step": 5,
+    "prerequisites": ["time-001"],
+    "teacher_notes": {
+      "beginner": "Learn the kick pattern by itself first, then add it under the groove. Go very slowly.",
+      "intermediate": "The syncopated kick should create rhythmic interest without destabilizing the backbeat.",
+      "advanced": "Vary the kick pattern each time through the form. Improvise with your foot."
+    },
+    "tags": ["rock", "independence", "kick"]
+  },
+  {
+    "id": "ind-003",
+    "name": "Hi-Hat Foot Independence",
+    "domain": "independence",
+    "family": "funk",
+    "description": "Maintain 8th note hi-hat foot on 2 and 4 while hands play a groove",
+    "notation": {
+      "type": "kit",
+      "time_signature": "4/4",
+      "subdivision": "8th",
+      "voices": [
+        {
+          "instrument": "hihat",
+          "position": "top",
+          "notehead": "x",
+          "pattern": [1,1,1,1,1,1,1,1],
+          "accents": [0,2,4,6],
+          "ghosts": []
+        },
+        {
+          "instrument": "snare",
+          "position": "middle",
+          "notehead": "standard",
+          "pattern": [0,0,1,0,0,0,1,0],
+          "accents": [2, 6],
+          "ghosts": []
+        },
+        {
+          "instrument": "kick",
+          "position": "bottom",
+          "notehead": "standard",
+          "pattern": [1,0,0,0,1,1,0,0],
+          "accents": [],
+          "ghosts": []
+        },
+        {
+          "instrument": "hihat_foot",
+          "position": "below",
+          "notehead": "x",
+          "pattern": [0,0,1,0,0,0,1,0],
+          "accents": [],
+          "ghosts": []
+        }
+      ]
+    },
+    "tempo_floor": 60,
+    "tempo_ceiling": 130,
+    "tempo_step": 5,
+    "prerequisites": ["time-001"],
+    "teacher_notes": {
+      "beginner": "Practice the hi-hat foot by itself — just clap on 2 and 4 with your foot. Then add the other limbs one at a time.",
+      "intermediate": "The hi-hat foot on 2 and 4 sounds like a second backbeat. It deepens the groove.",
+      "advanced": "Open the hi-hat foot on the 'and' of 2 and 4 for a more complex texture."
+    },
+    "tags": ["independence", "hihat", "groove"]
+  },
+  {
+    "id": "ind-004",
+    "name": "Four-Way Coordination Grid",
+    "domain": "independence",
+    "family": "coordination",
+    "description": "Systematic limb independence: all four combinations of two hands and two feet",
+    "notation": {
+      "type": "kit",
+      "time_signature": "4/4",
+      "subdivision": "8th",
+      "voices": [
+        {
+          "instrument": "hihat",
+          "position": "top",
+          "notehead": "x",
+          "pattern": [1,0,0,0,1,0,0,0],
+          "accents": [0, 4],
+          "ghosts": []
+        },
+        {
+          "instrument": "snare",
+          "position": "middle",
+          "notehead": "standard",
+          "pattern": [0,0,1,0,0,0,1,0],
+          "accents": [2, 6],
+          "ghosts": []
+        },
+        {
+          "instrument": "kick",
+          "position": "bottom",
+          "notehead": "standard",
+          "pattern": [0,1,0,0,0,1,0,0],
+          "accents": [],
+          "ghosts": []
+        },
+        {
+          "instrument": "hihat_foot",
+          "position": "below",
+          "notehead": "x",
+          "pattern": [0,0,0,1,0,0,0,1],
+          "accents": [],
+          "ghosts": []
+        }
+      ]
+    },
+    "tempo_floor": 40,
+    "tempo_ceiling": 100,
+    "tempo_step": 5,
+    "prerequisites": ["ind-002", "ind-003"],
+    "teacher_notes": {
+      "beginner": "Work through one measure at a time. Don't rush. This is pure brain training.",
+      "intermediate": "If you get stuck, remove one limb, get comfortable, then add it back.",
+      "advanced": "The goal isn't any specific pattern — it's the ability to play ANY combination of four limbs."
+    },
+    "tags": ["independence", "coordination", "four-way"]
+  }
+]

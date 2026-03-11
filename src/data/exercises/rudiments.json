@@ -1,0 +1,342 @@
+[
+  {
+    "id": "rud-001",
+    "name": "Single Stroke Roll",
+    "domain": "rudiments",
+    "family": "singles",
+    "description": "Alternating single strokes: RLRL...",
+    "notation": {
+      "type": "sticking",
+      "pattern": "RLRLRLRL",
+      "time_signature": "4/4",
+      "subdivision": "16th",
+      "voices": [
+        {
+          "instrument": "snare",
+          "position": "middle",
+          "notehead": "standard",
+          "pattern": [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
+          "sticking": ["R","L","R","L","R","L","R","L","R","L","R","L","R","L","R","L"],
+          "accents": [],
+          "ghosts": []
+        }
+      ]
+    },
+    "tempo_floor": 60,
+    "tempo_ceiling": 180,
+    "tempo_step": 5,
+    "prerequisites": [],
+    "teacher_notes": {
+      "beginner": "Focus on even stick heights. Match the sound of each hand.",
+      "intermediate": "Start using fingers and wrist together. Stay relaxed at the fulcrum.",
+      "advanced": "Push for Moeller-assisted speed. If you tense up, drop 10 BPM."
+    },
+    "tags": ["fundamental", "speed", "warm-up-eligible"]
+  },
+  {
+    "id": "rud-002",
+    "name": "Single Stroke Four",
+    "domain": "rudiments",
+    "family": "singles",
+    "description": "Four alternating strokes followed by a stop: RLRL",
+    "notation": {
+      "type": "sticking",
+      "pattern": "RLRL RLRL",
+      "time_signature": "4/4",
+      "subdivision": "8th",
+      "voices": [
+        {
+          "instrument": "snare",
+          "position": "middle",
+          "notehead": "standard",
+          "pattern": [1,1,1,1,1,1,1,1],
+          "sticking": ["R","L","R","L","R","L","R","L"],
+          "accents": [0, 4],
+          "ghosts": []
+        }
+      ]
+    },
+    "tempo_floor": 60,
+    "tempo_ceiling": 160,
+    "tempo_step": 5,
+    "prerequisites": ["rud-001"],
+    "teacher_notes": {
+      "beginner": "Accent the first stroke of each group clearly. Let the unaccented notes be softer.",
+      "intermediate": "The contrast between accented and unaccented strokes is the whole point. Exaggerate it.",
+      "advanced": "Try leading with your weak hand (LRLR) to develop balance."
+    },
+    "tags": ["fundamental", "warm-up-eligible"]
+  },
+  {
+    "id": "rud-003",
+    "name": "Double Stroke Roll",
+    "domain": "rudiments",
+    "family": "doubles",
+    "description": "Two strokes per hand: RRLLRRLL...",
+    "notation": {
+      "type": "sticking",
+      "pattern": "RRLLRRLL",
+      "time_signature": "4/4",
+      "subdivision": "16th",
+      "voices": [
+        {
+          "instrument": "snare",
+          "position": "middle",
+          "notehead": "standard",
+          "pattern": [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
+          "sticking": ["R","R","L","L","R","R","L","L","R","R","L","L","R","R","L","L"],
+          "accents": [],
+          "ghosts": []
+        }
+      ]
+    },
+    "tempo_floor": 50,
+    "tempo_ceiling": 160,
+    "tempo_step": 5,
+    "prerequisites": ["rud-001"],
+    "teacher_notes": {
+      "beginner": "Practice each double as a controlled bounce. The second stroke comes from rebound, not a new arm motion.",
+      "intermediate": "At medium tempos, use wrist for first stroke and finger/wrist rebound for second.",
+      "advanced": "At high tempos this becomes a pressure roll. Relax your grip slightly and let the stick bounce freely."
+    },
+    "tags": ["fundamental", "speed", "warm-up-eligible"]
+  },
+  {
+    "id": "rud-004",
+    "name": "Single Paradiddle",
+    "domain": "rudiments",
+    "family": "diddles",
+    "description": "RLRR LRLL — the most fundamental compound rudiment",
+    "notation": {
+      "type": "sticking",
+      "pattern": "RLRR LRLL",
+      "time_signature": "4/4",
+      "subdivision": "16th",
+      "voices": [
+        {
+          "instrument": "snare",
+          "position": "middle",
+          "notehead": "standard",
+          "pattern": [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
+          "sticking": ["R","L","R","R","L","R","L","L","R","L","R","R","L","R","L","L"],
+          "accents": [0, 4, 8, 12],
+          "ghosts": []
+        }
+      ]
+    },
+    "tempo_floor": 50,
+    "tempo_ceiling": 150,
+    "tempo_step": 5,
+    "prerequisites": ["rud-001", "rud-003"],
+    "teacher_notes": {
+      "beginner": "Say 'pa-ra-did-dle' out loud while playing. Each syllable is one stroke.",
+      "intermediate": "The accent on beat 1 of each group should pop. Everything else is quieter.",
+      "advanced": "Orchestrate around the kit — accent on snare, other notes on toms or different surfaces."
+    },
+    "tags": ["fundamental", "vocabulary", "warm-up-eligible"]
+  },
+  {
+    "id": "rud-005",
+    "name": "Flam",
+    "domain": "rudiments",
+    "family": "flams",
+    "description": "A grace note immediately before the primary stroke",
+    "notation": {
+      "type": "sticking",
+      "pattern": "lR rL lR rL",
+      "time_signature": "4/4",
+      "subdivision": "8th",
+      "voices": [
+        {
+          "instrument": "snare",
+          "position": "middle",
+          "notehead": "standard",
+          "pattern": [1,1,1,1,1,1,1,1],
+          "sticking": ["lR","rL","lR","rL","lR","rL","lR","rL"],
+          "accents": [0,2,4,6],
+          "ghosts": [1,3,5,7]
+        }
+      ]
+    },
+    "tempo_floor": 50,
+    "tempo_ceiling": 130,
+    "tempo_step": 5,
+    "prerequisites": ["rud-001"],
+    "teacher_notes": {
+      "beginner": "The grace note should be very quiet and very close to the primary stroke — almost simultaneous but not quite.",
+      "intermediate": "Keep your grace note hand low (1–2 inches) and primary stroke hand high (8–10 inches).",
+      "advanced": "Flamacues, flam accents, and flam taps all derive from this. Own it at all tempos."
+    },
+    "tags": ["fundamental", "texture"]
+  },
+  {
+    "id": "rud-006",
+    "name": "Flam Accent",
+    "domain": "rudiments",
+    "family": "flams",
+    "description": "Flam followed by two taps: lRlr rLrl",
+    "notation": {
+      "type": "sticking",
+      "pattern": "lRlr rLrl",
+      "time_signature": "4/4",
+      "subdivision": "triplet",
+      "voices": [
+        {
+          "instrument": "snare",
+          "position": "middle",
+          "notehead": "standard",
+          "pattern": [1,1,1,1,1,1],
+          "sticking": ["lR","l","r","rL","r","l"],
+          "accents": [0, 3],
+          "ghosts": []
+        }
+      ]
+    },
+    "tempo_floor": 50,
+    "tempo_ceiling": 120,
+    "tempo_step": 5,
+    "prerequisites": ["rud-005"],
+    "teacher_notes": {
+      "beginner": "This lives in triplet feel. Count '1-trip-let 2-trip-let' while playing.",
+      "intermediate": "The primary flam stroke on 1 and 2 should be clearly louder. Taps should be controlled, not sloppy.",
+      "advanced": "A staple in rudimental drumming. Apply it in a musical context — fills, jazz brushwork."
+    },
+    "tags": ["flam", "vocabulary"]
+  },
+  {
+    "id": "rud-007",
+    "name": "Five Stroke Roll",
+    "domain": "rudiments",
+    "family": "rolls",
+    "description": "RRLLR LLRRL — five strokes ending on a single",
+    "notation": {
+      "type": "sticking",
+      "pattern": "RRLLr LLRRl",
+      "time_signature": "4/4",
+      "subdivision": "16th",
+      "voices": [
+        {
+          "instrument": "snare",
+          "position": "middle",
+          "notehead": "standard",
+          "pattern": [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
+          "sticking": ["R","R","L","L","R","L","L","R","R","L","R","R","L","L","R","L"],
+          "accents": [4, 12],
+          "ghosts": []
+        }
+      ]
+    },
+    "tempo_floor": 50,
+    "tempo_ceiling": 140,
+    "tempo_step": 5,
+    "prerequisites": ["rud-003"],
+    "teacher_notes": {
+      "beginner": "Think of it as two doubles plus an accent: RR LL R. The R on the end is the 'point' of the roll.",
+      "intermediate": "The accent at the end of each five-stroke group should arrive exactly on the beat.",
+      "advanced": "Essential for fills. Practice moving the accent around the kit."
+    },
+    "tags": ["rolls", "vocabulary"]
+  },
+  {
+    "id": "rud-008",
+    "name": "Nine Stroke Roll",
+    "domain": "rudiments",
+    "family": "rolls",
+    "description": "Four doubles plus a single: RRLLRRLLr",
+    "notation": {
+      "type": "sticking",
+      "pattern": "RRLLRRLLr LLRRLLRRl",
+      "time_signature": "4/4",
+      "subdivision": "16th",
+      "voices": [
+        {
+          "instrument": "snare",
+          "position": "middle",
+          "notehead": "standard",
+          "pattern": [1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1],
+          "sticking": ["R","R","L","L","R","R","L","L","R","","L","L","R","R","L","L"],
+          "accents": [8],
+          "ghosts": []
+        }
+      ]
+    },
+    "tempo_floor": 50,
+    "tempo_ceiling": 130,
+    "tempo_step": 5,
+    "prerequisites": ["rud-007"],
+    "teacher_notes": {
+      "beginner": "Four doubles then a tap. Count every double stroke as one unit.",
+      "intermediate": "The final accent lands on the 'and' of beat 2 in 4/4. Be precise.",
+      "advanced": "Combine nine-stroke rolls with five-stroke rolls for longer fill phrases."
+    },
+    "tags": ["rolls", "vocabulary"]
+  },
+  {
+    "id": "rud-009",
+    "name": "Double Paradiddle",
+    "domain": "rudiments",
+    "family": "diddles",
+    "description": "RLRLRR LRLRLL — six-note compound rudiment",
+    "notation": {
+      "type": "sticking",
+      "pattern": "RLRLRR LRLRLL",
+      "time_signature": "4/4",
+      "subdivision": "16th",
+      "voices": [
+        {
+          "instrument": "snare",
+          "position": "middle",
+          "notehead": "standard",
+          "pattern": [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
+          "sticking": ["R","L","R","L","R","R","L","R","L","R","L","L","R","L","R","L"],
+          "accents": [0, 6],
+          "ghosts": []
+        }
+      ]
+    },
+    "tempo_floor": 50,
+    "tempo_ceiling": 130,
+    "tempo_step": 5,
+    "prerequisites": ["rud-004"],
+    "teacher_notes": {
+      "beginner": "This is a single paradiddle with an extra RL in front: RL + RLRR.",
+      "intermediate": "In 6/8 time, this loops perfectly. Try it in a triplet feel.",
+      "advanced": "Orchestrate around the kit. The two diddles create natural accent opportunities."
+    },
+    "tags": ["diddles", "vocabulary"]
+  },
+  {
+    "id": "rud-010",
+    "name": "Drag",
+    "domain": "rudiments",
+    "family": "drags",
+    "description": "Two grace notes before a primary stroke: rrR llL",
+    "notation": {
+      "type": "sticking",
+      "pattern": "rrR llL rrR llL",
+      "time_signature": "4/4",
+      "subdivision": "8th",
+      "voices": [
+        {
+          "instrument": "snare",
+          "position": "middle",
+          "notehead": "standard",
+          "pattern": [1,1,1,1,1,1,1,1],
+          "sticking": ["rrR","llL","rrR","llL","rrR","llL","rrR","llL"],
+          "accents": [0,2,4,6],
+          "ghosts": []
+        }
+      ]
+    },
+    "tempo_floor": 50,
+    "tempo_ceiling": 120,
+    "tempo_step": 5,
+    "prerequisites": ["rud-003"],
+    "teacher_notes": {
+      "beginner": "Two quiet grace notes, then one loud primary stroke. The grace notes are a fast double.",
+      "intermediate": "At slow tempos, play two distinct quiet strokes. At faster tempos, they blur into a buzz.",
+      "advanced": "The drag is the foundation of the single drag tap, double drag tap, and drag paradiddle."
+    },
+    "tags": ["drags", "texture"]
+  }
+]

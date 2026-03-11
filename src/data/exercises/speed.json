@@ -1,0 +1,70 @@
+[
+  {
+    "id": "spd-001",
+    "name": "Singles Tempo Push",
+    "domain": "speed",
+    "family": "endurance",
+    "description": "Extended single stroke roll sessions focused on building clean speed through relaxation",
+    "notation": {
+      "type": "sticking",
+      "pattern": "RLRLRLRL (sustained)",
+      "time_signature": "4/4",
+      "subdivision": "16th",
+      "voices": [
+        {
+          "instrument": "snare",
+          "position": "middle",
+          "notehead": "standard",
+          "pattern": [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
+          "sticking": ["R","L","R","L","R","L","R","L","R","L","R","L","R","L","R","L"],
+          "accents": [],
+          "ghosts": []
+        }
+      ]
+    },
+    "tempo_floor": 100,
+    "tempo_ceiling": 220,
+    "tempo_step": 5,
+    "prerequisites": ["rud-001"],
+    "teacher_notes": {
+      "beginner": "Speed is a result of relaxation, not effort. If you feel tension in your forearms, you're going too fast.",
+      "intermediate": "At higher tempos, switch from wrist strokes to a combination of wrist and finger technique.",
+      "advanced": "Record yourself. Tension shows up in video even when you can't feel it. Watch your shoulders and jaw."
+    },
+    "tags": ["speed", "endurance", "singles"]
+  },
+  {
+    "id": "spd-002",
+    "name": "Doubles Speed Builder",
+    "domain": "speed",
+    "family": "speed",
+    "description": "Building clean double stroke speed through controlled tempo progression",
+    "notation": {
+      "type": "sticking",
+      "pattern": "RRLLRRLL (sustained)",
+      "time_signature": "4/4",
+      "subdivision": "16th",
+      "voices": [
+        {
+          "instrument": "snare",
+          "position": "middle",
+          "notehead": "standard",
+          "pattern": [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
+          "sticking": ["R","R","L","L","R","R","L","L","R","R","L","L","R","R","L","L"],
+          "accents": [],
+          "ghosts": []
+        }
+      ]
+    },
+    "tempo_floor": 80,
+    "tempo_ceiling": 180,
+    "tempo_step": 5,
+    "prerequisites": ["rud-003"],
+    "teacher_notes": {
+      "beginner": "At slow tempos, each double is two deliberate strokes. At fast tempos, it's one controlled bounce.",
+      "intermediate": "The crossover point — where stroke technique becomes bounce technique — is usually around 120–140 BPM. Find yours.",
+      "advanced": "Open rolls require the bounce to be perfectly controlled. Practice at the crossover point until it's seamless."
+    },
+    "tags": ["speed", "doubles", "technique"]
+  }
+]

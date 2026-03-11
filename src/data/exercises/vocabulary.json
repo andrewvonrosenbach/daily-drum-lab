@@ -1,0 +1,140 @@
+[
+  {
+    "id": "voc-001",
+    "name": "Basic 1-Bar Fill (8th Notes)",
+    "domain": "vocabulary",
+    "family": "fills",
+    "description": "Simple 8th note fills orchestrated around the kit",
+    "notation": {
+      "type": "kit",
+      "time_signature": "4/4",
+      "subdivision": "8th",
+      "voices": [
+        {
+          "instrument": "snare",
+          "position": "middle",
+          "notehead": "standard",
+          "pattern": [0,0,0,0,0,0,1,1],
+          "accents": [6, 7],
+          "ghosts": []
+        },
+        {
+          "instrument": "tom1",
+          "position": "upper",
+          "notehead": "standard",
+          "pattern": [0,0,0,0,1,1,0,0],
+          "accents": [4, 5],
+          "ghosts": []
+        },
+        {
+          "instrument": "kick",
+          "position": "bottom",
+          "notehead": "standard",
+          "pattern": [1,0,1,0,0,0,0,0],
+          "accents": [],
+          "ghosts": []
+        }
+      ]
+    },
+    "tempo_floor": 60,
+    "tempo_ceiling": 150,
+    "tempo_step": 5,
+    "prerequisites": ["time-001", "rud-001"],
+    "teacher_notes": {
+      "beginner": "Fills should set up the next section, not show off. Land on beat 1 of the next bar cleanly.",
+      "intermediate": "Practice the fill in context: 3 bars of groove + 1 bar fill. Repeat until seamless.",
+      "advanced": "Vary the orchestration: snare-to-toms, toms-to-kick, bass-drum-led fills."
+    },
+    "tags": ["fills", "vocabulary", "application"]
+  },
+  {
+    "id": "voc-002",
+    "name": "Basic 1-Bar Fill (16th Notes)",
+    "domain": "vocabulary",
+    "family": "fills",
+    "description": "16th note fills moving around the kit",
+    "notation": {
+      "type": "kit",
+      "time_signature": "4/4",
+      "subdivision": "16th",
+      "voices": [
+        {
+          "instrument": "snare",
+          "position": "middle",
+          "notehead": "standard",
+          "pattern": [0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1],
+          "accents": [12,14],
+          "ghosts": [13,15]
+        },
+        {
+          "instrument": "tom1",
+          "position": "upper",
+          "notehead": "standard",
+          "pattern": [0,0,0,0,0,0,0,0,1,1,1,1,0,0,0,0],
+          "accents": [8,10],
+          "ghosts": [9,11]
+        },
+        {
+          "instrument": "tom2",
+          "position": "midlow",
+          "notehead": "standard",
+          "pattern": [0,0,0,0,1,1,1,1,0,0,0,0,0,0,0,0],
+          "accents": [4,6],
+          "ghosts": [5,7]
+        },
+        {
+          "instrument": "kick",
+          "position": "bottom",
+          "notehead": "standard",
+          "pattern": [1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0],
+          "accents": [],
+          "ghosts": []
+        }
+      ]
+    },
+    "tempo_floor": 50,
+    "tempo_ceiling": 130,
+    "tempo_step": 5,
+    "prerequisites": ["voc-001", "rud-001"],
+    "teacher_notes": {
+      "beginner": "Play the fill on snare only first, then move it to different drums.",
+      "intermediate": "Think of the fill as a descending waterfall: high tom → mid tom → snare → kick.",
+      "advanced": "Try ascending fills (snare → toms), reverse waterfalls, and mixed orchestrations."
+    },
+    "tags": ["fills", "vocabulary", "toms"]
+  },
+  {
+    "id": "voc-003",
+    "name": "Paradiddle-Based Fill",
+    "domain": "vocabulary",
+    "family": "fills",
+    "description": "Apply single paradiddle sticking around the kit for musical fills",
+    "notation": {
+      "type": "sticking",
+      "pattern": "RLRR LRLL (around kit)",
+      "time_signature": "4/4",
+      "subdivision": "16th",
+      "voices": [
+        {
+          "instrument": "snare",
+          "position": "middle",
+          "notehead": "standard",
+          "pattern": [1,0,1,1,0,1,0,0,1,0,1,1,0,1,0,0],
+          "sticking": ["R","","L","R","","R","","","L","","R","L","","L","",""],
+          "accents": [0,3,8,11],
+          "ghosts": []
+        }
+      ]
+    },
+    "tempo_floor": 50,
+    "tempo_ceiling": 130,
+    "tempo_step": 5,
+    "prerequisites": ["rud-004", "voc-001"],
+    "teacher_notes": {
+      "beginner": "Play the paradiddle sticking on snare first until it's automatic, then start moving notes to toms.",
+      "intermediate": "The diddle (RR or LL) naturally falls on the same drum as the previous stroke — that's your accent point.",
+      "advanced": "Try paradiddle inversion, paradiddle-diddle, and other variants as fill vocabulary."
+    },
+    "tags": ["fills", "rudiments", "vocabulary", "application"]
+  }
+]
