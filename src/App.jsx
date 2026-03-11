@@ -49,11 +49,18 @@ export default function App() {
     let activeCycle = cycle
     if (!activeCycle || activeCycle.status !== 'active') {
       activeCycle = selectNewCycle(progress, history, settings)
+      if (!activeCycle) {
+        alert('Could not find an exercise to practice. Try enabling more domains in Settings.')
+        return
+      }
       setCycle(activeCycle)
       saveCurrentCycle(activeCycle)
     }
     const session = generateSession(activeCycle, progress, history, settings)
-    if (!session) return
+    if (!session) {
+      alert('Could not generate a session. Try resetting progress in Settings if this persists.')
+      return
+    }
     setActiveSession(session)
     setView(VIEWS.session)
   }

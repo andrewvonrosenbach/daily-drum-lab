@@ -1,7 +1,6 @@
 import { EXERCISES_BY_ID } from '../data/index.js'
 import { getExerciseProgress, getTeacherNoteLevel } from './tempo-progression.js'
 import { selectWarmUps } from './warm-up-selector.js'
-import { selectNewCycle } from './cycle-engine.js'
 
 export function generateSession(cycle, progress, history, settings) {
   const sessionDuration = settings.sessionDuration || 30
@@ -11,12 +10,8 @@ export function generateSession(cycle, progress, history, settings) {
   const primaryMins = Math.round(sessionDuration * (18 / 30))
   const secondaryMins = sessionDuration - warmUpMins - primaryMins
 
-  let activeCycle = cycle
-  if (!activeCycle || activeCycle.status !== 'active') {
-    activeCycle = selectNewCycle(progress, history, settings)
-  }
-
-  if (!activeCycle) return null
+  if (!cycle) return null
+  const activeCycle = cycle
 
   const primaryId = activeCycle.primaryExerciseId
   const secondaryId = activeCycle.secondaryExerciseId

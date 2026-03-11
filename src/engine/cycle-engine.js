@@ -84,7 +84,7 @@ export function selectNewCycle(progress, history, settings) {
 export function shouldTriggerCheckIn(cycle) {
   if (!cycle) return false
   const nextCheckIn = (cycle.checkInsDone + 1) * CHECKIN_INTERVAL
-  return cycle.sessionCount > 0 && cycle.sessionCount % CHECKIN_INTERVAL === 0
+  return cycle.sessionCount > 0 && cycle.sessionCount >= nextCheckIn
 }
 
 export function advanceCycle(cycle) {
