@@ -38,7 +38,7 @@ export default function App() {
   const metronome = useMetronome()
 
   function handleStartSession() {
-    if (shouldTriggerCheckIn(cycle)) {
+    if (cycle?.status === 'active' && shouldTriggerCheckIn(cycle)) {
       setShowCheckIn(true)
       return
     }

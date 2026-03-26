@@ -34,7 +34,7 @@ export default function SessionHome({ cycle, progress, history, onStartSession, 
           {primaryEx ? (
             <>
               <div className="text-xs text-amber-400 uppercase tracking-widest font-semibold mb-1">
-                Current Focus · Day {(cycle.sessionCount || 0) + 1} of {cycle.sessionTarget || 10}
+                Current Focus · Day {Math.min((cycle.sessionCount || 0) + 1, cycle.sessionTarget || 10)} of {cycle.sessionTarget || 10}
               </div>
               <h2 className="text-xl font-bold mb-1">{primaryEx.name}</h2>
               <div className="text-sm text-gray-400 mb-3">

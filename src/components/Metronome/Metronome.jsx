@@ -3,7 +3,7 @@ import BeatIndicator from './BeatIndicator.jsx'
 const SUBDIVISION_OPTIONS = [
   { value: 'quarter', label: '♩' },
   { value: '8th', label: '♪' },
-  { value: '16th', label: '𝅘𝅥𝅯' },
+  { value: '16th', label: '1/16' },
   { value: 'triplet', label: '3' },
 ]
 

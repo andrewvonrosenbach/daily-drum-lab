@@ -34,9 +34,10 @@ export default function ActiveSession({ session, metronome, onComplete, onSkip }
   const hasSecondary = !!session.secondaryFocus
 
   useEffect(() => {
+    const primaryStartTempo = session.primaryFocus?.tempoBlocks?.[0]?.tempo ?? session.primaryFocus?.tempo
     const tempoForPhase = {
       warmup: warmUps[warmUpIndex]?.tempo,
-      primary: session.primaryFocus?.tempo,
+      primary: primaryStartTempo,
       secondary: session.secondaryFocus?.tempo,
     }
     const t = tempoForPhase[phase]
