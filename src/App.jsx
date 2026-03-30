@@ -8,6 +8,7 @@ import SettingsView from './components/Settings/SettingsView.jsx'
 import { useMetronome } from './components/Metronome/useMetronome.js'
 import { generateSession } from './engine/session-generator.js'
 import { recordResult } from './engine/tempo-progression.js'
+import { EXERCISES_BY_ID } from './data/index.js'
 import {
   selectNewCycle,
   advanceCycle,
@@ -111,6 +112,30 @@ export default function App() {
     setView(VIEWS.home)
   }
 
+  function handleCycleChange(updatedCycle) {
+    setCycle(updatedCycle)
+    saveCurrentCycle(updatedCycle)
+  }
+
+  function handleProgressAdjust(exerciseId, newTempo) {
+    const current = progress[exerciseId]
+    const ex = EXERCISES_BY_ID[exerciseId]
+    if (!ex) return
+    const updated = {
+      ...progress,
+      [exerciseId]: {
+        exerciseId,
+        currentTempo: newTempo,
+        tempoHistory: current?.tempoHistory ?? [],
+        cleanStreakAtCurrentTempo: 0,
+        mastered: current?.mastered ?? false,
+        masteredDate: current?.masteredDate ?? null,
+      },
+    }
+    setProgress(updated)
+    saveProgress(updated)
+  }
+
   function handleSaveSettings(newSettings) {
     setSettings(newSettings)
     saveSettings(newSettings)
@@ -190,7 +215,10 @@ export default function App() {
         <StatsView
           progress={progress}
           history={history}
+          cycle={cycle}
           onBack={() => setView(VIEWS.home)}
+          onCycleChange={handleCycleChange}
+          onProgressAdjust={handleProgressAdjust}
         />
       )}
 
