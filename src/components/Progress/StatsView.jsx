@@ -28,9 +28,7 @@ export default function StatsView({ progress, history, cycle, onBack, onCycleCha
     const p = progress[exId]
     if (p?.mastered) return 'mastered'
     if (p?.tempoHistory?.length > 0) return 'active'
-    const ex = EXERCISES_BY_ID[exId]
-    const prereqsMet = (ex?.prerequisites ?? []).every(preId => progress[preId]?.mastered)
-    return prereqsMet ? 'available' : 'locked'
+    return 'available'
   }
 
   function setExercise(slot, exerciseId) {
@@ -283,12 +281,11 @@ function PathwayRow({ label, exercises, progress, activePrimary, activeSecondary
             const isPrimary = ex.id === activePrimary
             const isSecondary = ex.id === activeSecondary
             const tempo = progress[ex.id]?.currentTempo
-            const isLocked = status === 'locked'
 
             return (
               <div key={ex.id} className="flex items-start">
                 <button
-                  onClick={() => !isLocked && onNodeTap(ex.id)}
+                  onClick={() => onNodeTap(ex.id)}
                   className="flex flex-col items-center w-16 group"
                 >
                   <div className={`w-10 h-10 rounded-full flex items-center justify-center text-xs font-bold transition-all border-2
@@ -300,21 +297,15 @@ function PathwayRow({ label, exercises, progress, activePrimary, activeSecondary
                       ? 'bg-green-700 border-green-600 text-white'
                       : status === 'active'
                       ? 'bg-gray-700 border-amber-500/60 text-amber-400'
-                      : status === 'available'
-                      ? 'bg-gray-700 border-gray-600 text-gray-400 group-hover:border-gray-400'
-                      : 'bg-gray-800 border-gray-700 text-gray-600 cursor-default'
+                      : 'bg-gray-700 border-gray-600 text-gray-400 group-hover:border-gray-400'
                     }`}
                   >
-                    {status === 'mastered' ? '✓'
-                      : status === 'locked' ? '🔒'
-                      : tempo ? tempo
-                      : '○'}
+                    {status === 'mastered' ? '✓' : tempo ? tempo : '○'}
                   </div>
                   <div
                     className={`text-center mt-1 leading-tight px-0.5 w-16 text-xs
                       ${isPrimary ? 'text-amber-400 font-semibold'
                         : isSecondary ? 'text-green-400 font-semibold'
-                        : status === 'locked' ? 'text-gray-600'
                         : 'text-gray-500'}`}
                     title={ex.name}
                   >
@@ -323,11 +314,7 @@ function PathwayRow({ label, exercises, progress, activePrimary, activeSecondary
                 </button>
 
                 {i < exercises.length - 1 && (
-                  <div
-                    className={`w-3 h-0.5 mt-5 shrink-0 ${
-                      getStatus(exercises[i + 1].id) === 'locked' ? 'bg-gray-700' : 'bg-gray-600'
-                    }`}
-                  />
+                  <div className="w-3 h-0.5 mt-5 shrink-0 bg-gray-600" />
                 )}
               </div>
             )
@@ -422,19 +409,14 @@ function ExercisePicker({ slot, progress, currentPrimary, currentSecondary, onSe
                       <div className={`w-8 h-8 rounded-full flex items-center justify-center text-xs flex-shrink-0 font-bold ${
                         status === 'mastered' ? 'bg-green-700 text-white' :
                         status === 'active' ? 'bg-gray-700 text-amber-400 border border-amber-500/50' :
-                        status === 'locked' ? 'bg-gray-800 text-gray-600' :
                         'bg-gray-700 text-gray-400'
                       }`}>
-                        {status === 'mastered' ? '✓' : status === 'locked' ? '🔒' : status === 'active' ? '●' : '○'}
+                        {status === 'mastered' ? '✓' : status === 'active' ? '●' : '○'}
                       </div>
                       <div className="flex-1 min-w-0">
                         <div className="text-sm font-medium">{ex.name}</div>
                         {exProg?.currentTempo ? (
                           <div className="text-xs text-amber-400">{exProg.currentTempo} BPM · {exProg.cleanStreakAtCurrentTempo ?? 0}/3 clean</div>
-                        ) : status === 'locked' ? (
-                          <div className="text-xs text-gray-500">
-                            Needs: {ex.prerequisites.map(p => EXERCISES_BY_ID[p]?.name).filter(Boolean).join(', ')}
-                          </div>
                         ) : null}
                       </div>
                       {isCurrent && <span className="text-xs text-amber-400 font-medium shrink-0">Current</span>}

@@ -26,10 +26,9 @@ export function recordResult(progress, exerciseId, tempo, result) {
   let mastered = current.mastered
 
   if (result === 'clean' && cleanStreak >= 3) {
-    // Advance to next tempo milestone
     nextTempo = Math.min(current.currentTempo + exercise.tempo_step, exercise.tempo_ceiling)
     cleanStreak = 0
-    if (current.currentTempo >= exercise.tempo_ceiling) {
+    if (nextTempo >= exercise.tempo_ceiling) {
       mastered = true
     }
   } else if (result === 'struggled') {
